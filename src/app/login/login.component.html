@@ -1,0 +1,26 @@
+<section class="flex flex-col mt-32">
+    <h2 class="text-4xl font-bold text-center">INICIO DE SESIÓN</h2>
+    <form class="flex flex-col mt-10 m-auto">
+        
+        <div class="input-box flex mb-6 w-80 h-9 drop-shadow-lg bg-white p-1">
+            <img src="/assets/user.svg" class="ml-2">
+            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none"
+                type="text" placeholder="Nombre de usuario">
+        </div>
+        <div class="error -mt-4 mb-3 ml-2">
+            <span class="text-red-600">Usuario invalido</span>
+        </div>
+
+        <div class="input-box flex mb-6 w-80 h-9 drop-shadow-lg bg-white p-1">
+            <img src="/assets/vector.svg" class="ml-2">
+            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none"
+                type="password" placeholder="Contraseña">
+        </div>
+        <div class="error -mt-4 mb-3 ml-2">
+            <span class="text-red-600">Usuario invalido</span>
+        </div>
+
+        <button class="bg-bttn text-xl text-white rounded-xl w-1/2 mt-4 m-auto p-1">Iniciar Sesión</button>
+    </form>
+    <p class="text-xl mt-4 m-auto">No tienes una cuenta? <a routerLink="/register" class="text-blue-600">Registrate</a></p>
+</section>

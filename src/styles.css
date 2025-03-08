@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+*{
+    font-family: 'Kanit';
+}
+
+:root{
+    --bg-main: #EAFAF1;
+    --bg-bttn: #73C6B6;
+}
+
+body{
+    background-color: var(--bg-main);
+}
+
+@theme {
+    --color-bttn: #73C6B6;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('/assets/fonts/Kanit-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('/assets/fonts/Kanit-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('/assets/fonts/Kanit-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('/assets/fonts/Kanit-Light.ttf');
+    font-weight: 300;
+}
