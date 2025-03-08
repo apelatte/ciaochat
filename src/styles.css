@@ -15,7 +15,10 @@ body{
 }
 
 @theme {
+    --color-main: #EAFAF1;
     --color-bttn: #73C6B6;
+    --color-bttn-200: #BAE5D9;
+    --color-bttn-300: #A3DBCE;
     --color-box: #E8F6F3;
     --radius-8xl: 6rem; 
 }
