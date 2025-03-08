@@ -1,26 +1,27 @@
-<section class="flex flex-col mt-32">
-    <h2 class="text-4xl font-bold text-center">INICIO DE SESIÓN</h2>
+<section class="flex flex-col mt-32 md:bg-box md:drop-shadow-lg md:w-xl md:mx-auto md:p-14 md:rounded-4xl">
+    <h2 class="text-4xl font-bold text-center xl:text-3xl">INICIO DE SESIÓN</h2>
     <form class="flex flex-col mt-10 m-auto">
-        
-        <div class="input-box flex mb-6 w-80 h-9 drop-shadow-lg bg-white p-1">
-            <img src="/assets/user.svg" class="ml-2">
-            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none"
-                type="text" placeholder="Nombre de usuario">
+
+        <div class="input-box flex mb-6 w-80 h-9 xl:h-8 drop-shadow-lg bg-white p-1">
+            <img src="/assets/user.svg" class="ml-2 xl:size-6">
+            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none xl:placeholder:text-base" type="text"
+                placeholder="Nombre de usuario">
         </div>
         <div class="error -mt-4 mb-3 ml-2">
             <span class="text-red-600">Usuario invalido</span>
         </div>
 
-        <div class="input-box flex mb-6 w-80 h-9 drop-shadow-lg bg-white p-1">
-            <img src="/assets/vector.svg" class="ml-2">
-            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none"
-                type="password" placeholder="Contraseña">
+        <div class="input-box flex mb-6 w-80 h-9 xl:h-8 drop-shadow-lg bg-white p-1">
+            <img src="/assets/vector.svg" class="ml-2 xl:size-6">
+            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none xl:placeholder:text-base" type="password"
+                placeholder="Contraseña">
         </div>
         <div class="error -mt-4 mb-3 ml-2">
-            <span class="text-red-600">Usuario invalido</span>
+            <span class="text-red-600">Contraseña invalida</span>
         </div>
 
         <button class="bg-bttn text-xl text-white rounded-xl w-1/2 mt-4 m-auto p-1">Iniciar Sesión</button>
     </form>
-    <p class="text-xl mt-4 m-auto">No tienes una cuenta? <a routerLink="/register" class="text-blue-600">Registrate</a></p>
+    <p class="text-xl mt-4 m-auto xl:text-base">No tienes una cuenta? <a routerLink="/register" class="text-blue-600">Registrate</a>
+    </p>
 </section>

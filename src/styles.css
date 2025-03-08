@@ -16,6 +16,7 @@ body{
 
 @theme {
     --color-bttn: #73C6B6;
+    --color-box: #E8F6F3;
 }
 
 @font-face {

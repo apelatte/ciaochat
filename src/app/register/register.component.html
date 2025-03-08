@@ -1,36 +1,36 @@
-<section class="flex flex-col mt-32">
-    <h2 class="text-4xl font-bold text-center">REGISTRO</h2>
+<section class="flex flex-col mt-32 md:bg-box md:drop-shadow-lg md:w-xl md:mx-auto md:p-14 md:rounded-4xl">
+    <h2 class="text-4xl font-bold text-center xl:text-3xl">REGISTRO</h2>
     <form class="flex flex-col mt-10 m-auto">
 
-        <div class="input-box flex w-80 h-9 mb-6 drop-shadow-lg bg-white p-1">
-            <img src="/assets/user.svg" class="ml-2">
-            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none" type="text"
+        <div class="input-box flex mb-6 w-80 h-9 xl:h-8 drop-shadow-lg bg-white p-1">
+            <img src="/assets/user.svg" class="ml-2 xl:size-6">
+            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none xl:placeholder:text-base" type="text"
                 placeholder="Nombre de usuario">
         </div>
         <div class="error -mt-4 mb-3 ml-2">
             <span class="text-red-600">Usuario invalido</span>
         </div>
 
-        <div class="input-box flex w-80 h-9 mb-6 drop-shadow-lg bg-white p-1">
-            <img src="/assets/vector.svg" class="ml-2">
-            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none" type="password"
+        <div class="input-box flex mb-6 w-80 h-9 xl:h-8 drop-shadow-lg bg-white p-1">
+            <img src="/assets/vector.svg" class="ml-2 xl:size-6">
+            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none xl:placeholder:text-base" type="password"
                 placeholder="Contraseña">
         </div>
         <div class="error -mt-4 mb-3 ml-2">
             <span class="text-red-600">Contraseña invalida</span>
         </div>
 
-        <div class="input-box flex w-80 h-9 mb-6 drop-shadow-lg bg-white p-1">
-            <img src="/assets/vector.svg" class="ml-2">
-            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none" type="password"
+        <div class="input-box flex mb-6 w-80 h-9 xl:h-8 drop-shadow-lg bg-white p-1">
+            <img src="/assets/vector.svg" class="ml-2 xl:size-6">
+            <input class="placeholder:text-lg placeholder:opacity-60 px-4 focus:outline-none xl:placeholder:text-base" type="password"
                 placeholder="Repite la contraseña">
         </div>
         <div class="error -mt-4 mb-3 ml-2">
             <span class="text-red-600">Las contraseñas no coinciden</span>
         </div>
 
-        <div class="input-box flex items-center gap-8 w-80 h-9 mb-6 drop-shadow-lg bg-white relative select-none">
-            <img [src]="selectedAvatar" class="ml-5">
+        <div class="input-box flex items-center gap-8 w-80 h-9 xl:h-8 mb-6 drop-shadow-lg bg-white relative select-none">
+            <img [src]="selectedAvatar" class="ml-5 xl:size-7">
             <label for="select" class="flex gap-4 cursor-pointer">
                 <span class="opacity-50">Selecciona tu avatar</span>
                 <img src="/assets/arrow.svg">
@@ -38,7 +38,7 @@
             <input type="checkbox" class="sr-only" (change)="toggleSelectAvatar(check.checked)" id="select" #check>
             <div class="select-avatar absolute top-full w-full h-40 overflow-y-scroll bg-white" *ngIf="showSelectAvatar">
                 <ul class="flex flex-col items-center">
-                    <li *ngFor="let avatar of avatars" class="w-full py-1 hover:bg-bttn" (click)="changeAvatar(avatar.src)">
+                    <li *ngFor="let avatar of avatars" class="w-full py-1 hover:bg-bttn cursor-pointer" (click)="changeAvatar(avatar.src)">
                         <img [src]="avatar.src" class="m-auto">
                     </li>
                 </ul>
@@ -48,5 +48,5 @@
         <button class="bg-bttn text-xl text-white rounded-xl w-1/2 mt-4 m-auto p-1 cursor-pointer">Registrarse</button>
 
     </form>
-    <p class="text-xl mt-4 m-auto">Ya tienes una cuenta? <a routerLink="/login" class="text-blue-600 cursor-pointer">Inicia sesión</a></p>
+    <p class="text-xl mt-4 m-auto xl:text-base">Ya tienes una cuenta? <a routerLink="/login" class="text-blue-600 cursor-pointer">Inicia sesión</a></p>
 </section>
