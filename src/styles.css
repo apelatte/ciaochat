@@ -20,6 +20,7 @@ body{
     --color-bttn-200: #BAE5D9;
     --color-bttn-300: #A3DBCE;
     --color-box: #E8F6F3;
+    --radius-5xl: 4rem; 
     --radius-8xl: 6rem; 
 }
 
