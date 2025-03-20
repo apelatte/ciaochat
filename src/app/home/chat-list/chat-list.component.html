@@ -48,7 +48,7 @@
     </ul>
     <button class="mr-4 w-14 h-full md:hidden cursor-pointer hover:bg-bttn-300" (click)="toggleMenu()"><img src="/assets/more.svg" class="w-full">
     </button>
-    <app-menu class="absolute right-2 top-12 w-auto cursor-pointer" *ngIf="showMoreMenu"></app-menu>
+    <app-menu class="absolute right-2 top-12 w-auto cursor-pointer" *ngIf="showMoreMenu" (addFriendClick)="toggleAddFriendModal()"></app-menu>
 </section>
 
-<!-- <app-add-friend></app-add-friend> -->
+<app-add-friend *ngIf="showAddFriendModal" (cancel)="toggleAddFriendModal()"></app-add-friend>

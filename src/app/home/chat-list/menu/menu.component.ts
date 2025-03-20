@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
+
+  @Output() addFriendClick = new EventEmitter();
+
+  constructor() { }
+
+  addFriend() { 
+    this.addFriendClick.emit(true);
+  }
 
 }

@@ -12,6 +12,7 @@ import { AddFriendComponent } from './add-friend/add-friend.component';
 export class ChatListComponent {
 
   showMoreMenu: boolean = false;
+  showAddFriendModal: boolean = false;
 
   constructor(private eRef: ElementRef){}
 
@@ -25,6 +26,11 @@ export class ChatListComponent {
 
   toggleMenu() {
     this.showMoreMenu = !this.showMoreMenu;
+  }
+
+  toggleAddFriendModal() {
+    this.showAddFriendModal = !this.showAddFriendModal;
+    if(this.showMoreMenu) this.toggleMenu();
   }
 
 }

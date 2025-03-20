@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-add-friend',
@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AddFriendComponent {
 
+  @Output() cancel = new EventEmitter();
+
+  constructor(){}
+
+  closeModal() {
+    this.cancel.emit(true);
+  }
 }
