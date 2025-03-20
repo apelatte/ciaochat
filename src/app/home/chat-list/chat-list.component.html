@@ -1,8 +1,9 @@
-<header class="hidden md:flex gap-4 pl-5 bg-bttn-200 h-8 w-9/11 m-auto rounded-full mb-2">
-    <img src="/assets/add-friend.svg" class="w-6 cursor-pointer">
+<header class="hidden md:flex gap-4 bg-bttn-200 h-8 w-9/11 m-auto rounded-full mb-2 relative">
+    <img src="/assets/add-friend-black.svg" class="w-6 ml-6 cursor-pointer">
     <img src="/assets/search.svg" class="w-6 cursor-pointer">
+    <input type="text" placeholder="Buscar amigo..." class="hidden absolute w-full h-full text-base bg-white rounded-full border-4 border-bttn-200 p-2 focus:outline-none">
 </header>
-<section class="flex h-13 w-90 mx-auto md:h-full md:w-full">
+<section class="flex h-13 w-90 mx-auto md:h-full md:w-full relative">
     <ul class="flex first:ml-4 w-full mr-1 overflow-x-scroll overflow-y-hidden relative md:flex-col md:overflow-y-auto md:overflow-x-hidden md:gap-2 md:border-r-2 md:border-bttn-300 md:h-11/12">
         <li class="flex items-center gap-4 shrink-0 p-2 cursor-pointer rounded-l-4xl md:bg-bttn-200 md:w-full md:h-12">
             <img src="/assets/avatares/avatar1.svg" class="w-12 md:w-10 lg:w-8">
@@ -45,5 +46,9 @@
             <span class="hidden md:block md:text-xl md:mr-4 whitespace-nowrap md:overflow-hidden xl:text-base">Martin Lopez</span>
         </li>
     </ul>
-    <button class="mr-4 w-14 h-full md:hidden"><img src="/assets/more.svg" class="w-full"></button>
+    <button class="mr-4 w-14 h-full md:hidden cursor-pointer hover:bg-bttn-300" (click)="toggleMenu()"><img src="/assets/more.svg" class="w-full">
+    </button>
+    <app-menu class="absolute right-2 top-12 w-auto cursor-pointer" *ngIf="showMoreMenu"></app-menu>
 </section>
+
+<!-- <app-add-friend></app-add-friend> -->
