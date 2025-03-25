@@ -13,8 +13,10 @@ export class ChatListComponent {
 
   showMoreMenu: boolean = false;
   showAddFriendModal: boolean = false;
+  showInputMenu: boolean = false;
+  inputMode: string = '';
 
-  constructor(private eRef: ElementRef){}
+  constructor(private eRef: ElementRef) { }
 
   @HostListener('document:click', ['$event'])
   clickOutside(event: Event) {
@@ -30,7 +32,11 @@ export class ChatListComponent {
 
   toggleAddFriendModal() {
     this.showAddFriendModal = !this.showAddFriendModal;
-    if(this.showMoreMenu) this.toggleMenu();
+    if (this.showMoreMenu) this.toggleMenu();
   }
 
+  toggleInput(mode: string) {
+    this.showInputMenu = !this.showInputMenu;
+    this.inputMode = mode;
+  }
 }
